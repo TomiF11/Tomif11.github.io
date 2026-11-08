@@ -1,13 +1,13 @@
-// the section on the page where the products will go
+
 const list = document.getElementById("products");
 
 async function showProducts() {
-    // 1. get the data from the JSON file
+    // get data from the JSON file
     const response = await fetch("data-pretty.json");
     const data = await response.json();
     const products = data.products;
 
-    // 2. go through the first 20 products
+    // go through the first 20 products
     for (let i = 0; i < 20; i++) {
         const product = products[i];
 
